@@ -358,19 +358,362 @@ removeOldCrypto(){
 
 
 joinChannel(){
-    setGlobalsForPeer0Org1 
+    setGlobalsForPeer0OEMOrg1 
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
     
-    setGlobalsForPeer1Org1
+    setGlobalsForPeer1OEMOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0OEMOrg2 
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
     
-    setGlobalsForPeer0Org2
+    setGlobalsForPeer1OEMOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0ServiceOrg1 
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
     
-    setGlobalsForPeer1Org2
+    setGlobalsForPeer1ServiceOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0ServiceOrg2 
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
     
+    setGlobalsForPeer1ServiceOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0ServiceOrg3 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1ServiceOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0ServiceOrg4 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1ServiceOrg4
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0LogisticsOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1LogisticsOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0LogisticsOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1LogisticsOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    # setGlobalsForPeer0LogisticsOrg4
+    # peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    # setGlobalsForPeer1LogisticsOrg4
+    # peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0RestarOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1RestarOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0RestarOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1RestarOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
 }
+
+joinChannel(){
+    setGlobalsForPeer0ServiceOrg1 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME1.block
+    
+    setGlobalsForPeer1ServiceOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME1.block
+
+    setGlobalsForPeer0OEMOrg1 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME1.block
+    
+    setGlobalsForPeer1OEMOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME1.block
+
+    setGlobalsForPeer0LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME1.block
+    
+    setGlobalsForPeer1LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME1.block
+
+    setGlobalsForPeer0RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME1.block
+    
+    setGlobalsForPeer1RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME1.block
+}
+
+joinChannel2(){
+    setGlobalsForPeer0ServiceOrg1 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME2.block
+    
+    setGlobalsForPeer1ServiceOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME2.block
+
+    setGlobalsForPeer0OEMOrg1 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME2.block
+    
+    setGlobalsForPeer1OEMOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME2.block
+
+    setGlobalsForPeer0LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME2.block
+    
+    setGlobalsForPeer1LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME2.block
+
+    setGlobalsForPeer0RestarOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME2.block
+    
+    setGlobalsForPeer1RestarOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME2.block
+
+}
+
+joinChannel3(){
+    setGlobalsForPeer0ServiceOrg1 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME3.block
+    
+    setGlobalsForPeer1ServiceOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME3.block
+
+    setGlobalsForPeer0OEMOrg1 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME3.block
+    
+    setGlobalsForPeer1OEMOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME3.block
+
+    setGlobalsForPeer0LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME3.block
+    
+    setGlobalsForPeer1LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME3.block
+
+    setGlobalsForPeer0RestarOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME3.block
+    
+    setGlobalsForPeer1RestarOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME3.block
+}
+
+joinChannel4(){
+    setGlobalsForPeer0ServiceOrg3 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME4.block
+    
+    setGlobalsForPeer1ServiceOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME4.block
+
+    setGlobalsForPeer0OEMOrg1 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME4.block
+    
+    setGlobalsForPeer1OEMOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME4.block
+
+    setGlobalsForPeer0LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME4.block
+    
+    setGlobalsForPeer1LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME4.block
+
+    setGlobalsForPeer0RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME4.block
+    
+    setGlobalsForPeer1RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME4.block
+
+}
+
+joinChannel5(){
+    setGlobalsForPeer0ServiceOrg1 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME5.block
+    
+    setGlobalsForPeer1ServiceOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME5.block
+
+    setGlobalsForPeer0OEMOrg1 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME5.block
+    
+    setGlobalsForPeer1OEMOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME5.block
+
+    setGlobalsForPeer0LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME5.block
+    
+    setGlobalsForPeer1LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME5.block
+
+    setGlobalsForPeer0RestarOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME5.block
+    
+    setGlobalsForPeer1RestarOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME5.block
+}
+
+joinChannel6(){
+    setGlobalsForPeer0ServiceOrg1 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME6.block
+    
+    setGlobalsForPeer1ServiceOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME6.block
+
+    setGlobalsForPeer0OEMOrg1 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME6.block
+    
+    setGlobalsForPeer1OEMOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME6.block
+
+    setGlobalsForPeer0LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME6.block
+    
+    setGlobalsForPeer1LogisticsOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME6.block
+
+    setGlobalsForPeer0RestarOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME6.block
+    
+    setGlobalsForPeer1RestarOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME6.block
+}
+
+joinChannel7(){
+    setGlobalsForPeer0ServiceOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME7.block
+    
+    setGlobalsForPeer1ServiceOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME7.block
+
+    setGlobalsForPeer0OEMOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME7.block
+    
+    setGlobalsForPeer1OEMOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME7.block
+
+    setGlobalsForPeer0LogisticsOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME7.block
+    
+    setGlobalsForPeer1LogisticsOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME7.block
+
+    setGlobalsForPeer0RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME7.block
+    
+    setGlobalsForPeer1RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME7.block
+}
+
+joinChannel8(){
+    setGlobalsForPeer0ServiceOrg2 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME8.block
+    
+    setGlobalsForPeer1ServiceOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME8.block
+
+    setGlobalsForPeer0OEMOrg2 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME8.block
+    
+    setGlobalsForPeer1OEMOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME8.block
+
+    setGlobalsForPeer0LogisticsOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME8.block
+    
+    setGlobalsForPeer1LogisticsOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME8.block
+
+    setGlobalsForPeer0RestarOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME8.block
+    
+    setGlobalsForPeer1RestarOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME8.block
+}
+
+joinChannel9(){
+    setGlobalsForPeer0ServiceOrg2 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME9.block
+    
+    setGlobalsForPeer1ServiceOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME9.block
+
+    setGlobalsForPeer0OEMOrg2 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME9.block
+    
+    setGlobalsForPeer1OEMOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME9.block
+
+    setGlobalsForPeer0LogisticsOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME9.block
+    
+    setGlobalsForPeer1LogisticsOrg2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME9.block
+
+    setGlobalsForPeer0RestarOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME9.block
+    
+    setGlobalsForPeer1RestarOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME9.block
+}
+
+joinChannel10(){
+    setGlobalsForPeer0ServiceOrg3 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1ServiceOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0LogisticsOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1LogisticsOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+}
+
+joinChannel11(){
+    setGlobalsForPeer0ServiceOrg4 
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1ServiceOrg4
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0LogisticsOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1LogisticsOrg3
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer0RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1RestarOrg1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+}
+
 
 updateAnchorPeers(){
     setGlobalsForPeer0Org1
@@ -396,18 +739,18 @@ createChannel9
 createChannel10
 createChannel11
 
-# joinChannel
-# joinChannel1
-# joinChannel2
-# joinChannel3
-# joinChannel4
-# joinChannel5
-# joinChannel6
-# joinChannel7
-# joinChannel8
-# joinChannel9
-# joinChannel10
-# joinChannel11
+joinChannel
+joinChannel1
+joinChannel2
+joinChannel3
+joinChannel4
+joinChannel5
+joinChannel6
+joinChannel7
+joinChannel8
+joinChannel9
+joinChannel10
+joinChannel11
 
 # updateAnchorPeers
 # updateAnchorPeers1
