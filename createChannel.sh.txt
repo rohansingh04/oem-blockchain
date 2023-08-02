@@ -915,7 +915,7 @@ createChannel9
 createChannel10
 createChannel11
 
-joinChannel
+# joinChannel
 joinChannel1
 joinChannel2
 joinChannel3
@@ -928,7 +928,7 @@ joinChannel9
 joinChannel10
 joinChannel11
 
-updateAnchorPeers
+# updateAnchorPeers
 updateAnchorPeers1
 updateAnchorPeers2
 updateAnchorPeers3
