@@ -12,6 +12,7 @@ export PEER0_ORG9_CA=${PWD}/artifacts/channel/crypto-config/peerOrganizations/oe
 export PEER0_ORG10_CA=${PWD}/artifacts/channel/crypto-config/peerOrganizations/logisticsorg2.example.com/peers/peer0.logisticsorg2.example.com/tls/ca.crt
 export PEER0_ORG11_CA=${PWD}/artifacts/channel/crypto-config/peerOrganizations/logisticsorg3.example.com/peers/peer0.logisticsorg3.example.com/tls/ca.crt
 export PEER0_ORG12_CA=${PWD}/artifacts/channel/crypto-config/peerOrganizations/serviceorg4.example.com/peers/peer0.serviceorg4.example.com/tls/ca.crt
+
 export FABRIC_CFG_PATH=${PWD}/artifacts/channel/config/
 
 export CHANNEL_NAME=mychannel
@@ -544,10 +545,10 @@ joinChannel4(){
 }
 
 joinChannel5(){
-    setGlobalsForPeer0ServiceOrg1 
+    setGlobalsForPeer0ServiceOrg3
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME5.block
     
-    setGlobalsForPeer1ServiceOrg1
+    setGlobalsForPeer1ServiceOrg3
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME5.block
 
     setGlobalsForPeer0OEMOrg1 
@@ -570,10 +571,10 @@ joinChannel5(){
 }
 
 joinChannel6(){
-    setGlobalsForPeer0ServiceOrg1 
+    setGlobalsForPeer0ServiceOrg3 
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME6.block
     
-    setGlobalsForPeer1ServiceOrg1
+    setGlobalsForPeer1ServiceOrg3
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME6.block
 
     setGlobalsForPeer0OEMOrg1 
@@ -675,42 +676,42 @@ joinChannel9(){
 
 joinChannel10(){
     setGlobalsForPeer0ServiceOrg3 
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME10.block
     
     setGlobalsForPeer1ServiceOrg3
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME10.block
 
     setGlobalsForPeer0LogisticsOrg3
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME10.block
     
     setGlobalsForPeer1LogisticsOrg3
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME10.block
 
     setGlobalsForPeer0RestarOrg1
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME10.block
     
     setGlobalsForPeer1RestarOrg1
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME10.block
 }
 
 joinChannel11(){
     setGlobalsForPeer0ServiceOrg4 
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME11.block
     
     setGlobalsForPeer1ServiceOrg4
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME11.block
 
     setGlobalsForPeer0LogisticsOrg3
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME11.block
     
     setGlobalsForPeer1LogisticsOrg3
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME11.block
 
     setGlobalsForPeer0RestarOrg1
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME11.block
     
     setGlobalsForPeer1RestarOrg1
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME11.block
 
 }
 
@@ -751,154 +752,155 @@ updateAnchorPeers(){
 
     setGlobalsForPeer0LogisticsOrg3
     peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    
 }
 
 updateAnchorPeers1(){
     setGlobalsForPeer0ServiceOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME1 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME1 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME1}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0OEMOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME1 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME1 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME1}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0LogisticsOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME1 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME1 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME1}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0RestarOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME1 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME1 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME1}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
 
 updateAnchorPeers2(){
     setGlobalsForPeer0ServiceOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME2 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME2 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME2}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0OEMOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME2 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME2 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME2}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0LogisticsOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME2 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME2 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME2}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0RestarOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME2 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME2 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME2}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
 
 updateAnchorPeers3(){
     setGlobalsForPeer0ServiceOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME3 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME3 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME3}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0OEMOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME3 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME3 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME3}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0LogisticsOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME3 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME3 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME3}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0RestarOrg3
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME3 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME3 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME3}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
 
 updateAnchorPeers4(){
     setGlobalsForPeer0ServiceOrg3
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME4 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME4 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME4}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0OEMOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME4 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME4 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME4}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0LogisticsOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME4 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME4 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME4}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0RestarOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME4 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME4 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME4}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
 
 updateAnchorPeers5(){
     setGlobalsForPeer0ServiceOrg3
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME5 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME5 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME5}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0OEMOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME5 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME5 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME5}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0LogisticsOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME5 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME5 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME5}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0RestarOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME5 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME5 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME5}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
 
 updateAnchorPeers6(){
     setGlobalsForPeer0ServiceOrg3
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME6 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME6 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME6}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0OEMOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME6 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME6 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME6}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0LogisticsOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME6 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME6 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME6}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0RestarOrg3
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME6 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME6 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME6}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
 
 updateAnchorPeers7(){
     setGlobalsForPeer0ServiceOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME7 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME7 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME7}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0OEMOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME7 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME7 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME7}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0LogisticsOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME7 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME7 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME7}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0RestarOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME7 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME7 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME7}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
 
 updateAnchorPeers8(){
     setGlobalsForPeer0ServiceOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME8 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME8 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME8}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0OEMOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME8 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME8 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME8}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0LogisticsOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME8 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME8 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME8}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0RestarOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME8 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME8 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME8}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
 
 updateAnchorPeers9(){
     setGlobalsForPeer0ServiceOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME9 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME9 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME9}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0OEMOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME9 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME9 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME9}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0LogisticsOrg2
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME9 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME9 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME9}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0RestarOrg3
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME9 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME9 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME9}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
 
 updateAnchorPeers10(){
     setGlobalsForPeer0ServiceOrg3
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME10 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME10 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME10}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0LogisticsOrg3
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME10 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME10 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME10}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0RestarOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME10 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME10 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME10}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
 
 updateAnchorPeers11(){
     setGlobalsForPeer0ServiceOrg4
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME11 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME11 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME11}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0LogisticsOrg3
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME11 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME11 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME11}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 
     setGlobalsForPeer0RestarOrg1
-    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME11 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $
+    peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME11 -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors_${CHANNEL_NAME11}.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
 # removeOldCrypto
 
