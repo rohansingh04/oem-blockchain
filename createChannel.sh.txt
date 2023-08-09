@@ -907,27 +907,27 @@ createChannel10
 createChannel11
 
 # joinChannel
-# joinChannel1
-# joinChannel2
-# joinChannel3
-# joinChannel4
-# joinChannel5
-# joinChannel6
-# joinChannel7
-# joinChannel8
-# joinChannel9
-# joinChannel10
-# joinChannel11
+joinChannel1
+joinChannel2
+joinChannel3
+joinChannel4
+joinChannel5
+joinChannel6
+joinChannel7
+joinChannel8
+joinChannel9
+joinChannel10
+joinChannel11
 
 # updateAnchorPeers
-# updateAnchorPeers1
-# updateAnchorPeers2
-# updateAnchorPeers3
-# updateAnchorPeers4
-# updateAnchorPeers5
-# updateAnchorPeers6
-# updateAnchorPeers7
-# updateAnchorPeers8
-# updateAnchorPeers9
-# updateAnchorPeers10
-# updateAnchorPeers11
+updateAnchorPeers1
+updateAnchorPeers2
+updateAnchorPeers3
+updateAnchorPeers4
+updateAnchorPeers5
+updateAnchorPeers6
+updateAnchorPeers7
+updateAnchorPeers8
+updateAnchorPeers9
+updateAnchorPeers10
+updateAnchorPeers11
