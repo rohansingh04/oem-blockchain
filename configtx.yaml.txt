@@ -563,7 +563,7 @@ Profiles:
                 - *ServiceOrg3
                 - *ServiceOrg4
 
-    EOLChannel1:
+    eolchannel1:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
         Application:
@@ -576,7 +576,7 @@ Profiles:
             Capabilities:
                 <<: *ApplicationCapabilities
 
-    EOLChannel2:
+    eolchannel2:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
         Application:
@@ -589,7 +589,7 @@ Profiles:
             Capabilities:
                 <<: *ApplicationCapabilities
 
-    EOLChannel3:
+    eolchannel3:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
         Application:
@@ -602,7 +602,7 @@ Profiles:
             Capabilities:
                 <<: *ApplicationCapabilities
 
-    EOLChannel4:
+    eolchannel4:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
         Application:
@@ -615,7 +615,7 @@ Profiles:
             Capabilities:
                 <<: *ApplicationCapabilities
 
-    EOLChannel5:
+    eolchannel5:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
         Application:
@@ -628,7 +628,7 @@ Profiles:
             Capabilities:
                 <<: *ApplicationCapabilities
 
-    EOLChannel6:
+    eolchannel6:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
         Application:
@@ -641,7 +641,7 @@ Profiles:
             Capabilities:
                 <<: *ApplicationCapabilities
 
-    EOLChannel7:
+    eolchannel7:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
         Application:
@@ -654,7 +654,7 @@ Profiles:
             Capabilities:
                 <<: *ApplicationCapabilities
 
-    EOLChannel8:
+    eolchannel8:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
         Application:
@@ -667,7 +667,7 @@ Profiles:
             Capabilities:
                 <<: *ApplicationCapabilities
 
-    EOLChannel9:
+    eolchannel9:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
         Application:
@@ -680,7 +680,7 @@ Profiles:
             Capabilities:
                 <<: *ApplicationCapabilities
 
-    EOLChannel10:
+    eolchannel10:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
         Application:
@@ -692,7 +692,7 @@ Profiles:
             Capabilities:
                 <<: *ApplicationCapabilities
 
-    EOLChannel11:
+    eolchannel11:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
         Application:
