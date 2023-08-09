@@ -241,7 +241,6 @@ createChannel(){
 }
 
 createChannel1(){
-    rm -rf ./channel-artifacts/*
     setGlobalsForPeer0ServiceOrg1
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME1 \
@@ -251,7 +250,6 @@ createChannel1(){
 }
 
 createChannel2(){
-    rm -rf ./channel-artifacts/*
     setGlobalsForPeer0ServiceOrg1
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME2 \
@@ -261,7 +259,6 @@ createChannel2(){
 }
 
 createChannel3(){
-    rm -rf ./channel-artifacts/*
     setGlobalsForPeer0ServiceOrg1
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME3 \
@@ -271,7 +268,6 @@ createChannel3(){
 }
 
 createChannel4(){
-    rm -rf ./channel-artifacts/*
     setGlobalsForPeer0ServiceOrg3
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME4 \
@@ -281,7 +277,6 @@ createChannel4(){
 }
 
 createChannel5(){
-    rm -rf ./channel-artifacts/*
     setGlobalsForPeer0ServiceOrg3
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME5 \
@@ -291,7 +286,6 @@ createChannel5(){
 }
 
 createChannel6(){
-    rm -rf ./channel-artifacts/*
     setGlobalsForPeer0ServiceOrg3
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME6 \
@@ -301,7 +295,6 @@ createChannel6(){
 }
 
 createChannel7(){
-    rm -rf ./channel-artifacts/*
     setGlobalsForPeer0ServiceOrg2
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME7 \
@@ -311,7 +304,6 @@ createChannel7(){
 }
 
 createChannel8(){
-    rm -rf ./channel-artifacts/*
     setGlobalsForPeer0ServiceOrg2
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME8 \
@@ -321,7 +313,6 @@ createChannel8(){
 }
 
 createChannel9(){
-    rm -rf ./channel-artifacts/*
     setGlobalsForPeer0ServiceOrg2
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME9 \
@@ -331,7 +322,6 @@ createChannel9(){
 }
 
 createChannel10(){
-    rm -rf ./channel-artifacts/*
     setGlobalsForPeer0ServiceOrg3
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME10 \
@@ -341,7 +331,6 @@ createChannel10(){
 }
 
 createChannel11(){
-    rm -rf ./channel-artifacts/*
     setGlobalsForPeer0ServiceOrg4
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME11 \
@@ -918,27 +907,27 @@ createChannel10
 createChannel11
 
 # joinChannel
-joinChannel1
-joinChannel2
-joinChannel3
-joinChannel4
-joinChannel5
-joinChannel6
-joinChannel7
-joinChannel8
-joinChannel9
-joinChannel10
-joinChannel11
+# joinChannel1
+# joinChannel2
+# joinChannel3
+# joinChannel4
+# joinChannel5
+# joinChannel6
+# joinChannel7
+# joinChannel8
+# joinChannel9
+# joinChannel10
+# joinChannel11
 
 # updateAnchorPeers
-updateAnchorPeers1
-updateAnchorPeers2
-updateAnchorPeers3
-updateAnchorPeers4
-updateAnchorPeers5
-updateAnchorPeers6
-updateAnchorPeers7
-updateAnchorPeers8
-updateAnchorPeers9
-updateAnchorPeers10
-updateAnchorPeers11
+# updateAnchorPeers1
+# updateAnchorPeers2
+# updateAnchorPeers3
+# updateAnchorPeers4
+# updateAnchorPeers5
+# updateAnchorPeers6
+# updateAnchorPeers7
+# updateAnchorPeers8
+# updateAnchorPeers9
+# updateAnchorPeers10
+# updateAnchorPeers11
