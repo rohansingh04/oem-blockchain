@@ -16,17 +16,17 @@ export PEER0_ORG12_CA=${PWD}/artifacts/channel/crypto-config/peerOrganizations/s
 export FABRIC_CFG_PATH=${PWD}/artifacts/channel/config/
 
 export CHANNEL_NAME=mychannel
-export CHANNEL_NAME1=EOLChannel1
-export CHANNEL_NAME2=EOLChannel2
-export CHANNEL_NAME3=EOLChannel3
-export CHANNEL_NAME4=EOLChannel4
-export CHANNEL_NAME5=EOLChannel5
-export CHANNEL_NAME6=EOLChannel6
-export CHANNEL_NAME7=EOLChannel7
-export CHANNEL_NAME8=EOLChannel8
-export CHANNEL_NAME9=EOLChannel9
-export CHANNEL_NAME10=EOLChannel10
-export CHANNEL_NAME11=EOLChannel11
+export CHANNEL_NAME1=eolchannel1
+export CHANNEL_NAME2=eolchannel2
+export CHANNEL_NAME3=eolchannel3
+export CHANNEL_NAME4=eolchannel4
+export CHANNEL_NAME5=eolchannel5
+export CHANNEL_NAME6=eolchannel6
+export CHANNEL_NAME7=eolchannel7
+export CHANNEL_NAME8=eolchannel8
+export CHANNEL_NAME9=eolchannel9
+export CHANNEL_NAME10=eolchannel10
+export CHANNEL_NAME11=eolchannel11
 
 
 # setGlobalsForOrderer(){
@@ -272,7 +272,7 @@ createChannel3(){
 
 createChannel4(){
     rm -rf ./channel-artifacts/*
-    setGlobalsForPeer0ServiceOrg1
+    setGlobalsForPeer0ServiceOrg3
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME4 \
     --ordererTLSHostnameOverride orderer.example.com \
@@ -282,7 +282,7 @@ createChannel4(){
 
 createChannel5(){
     rm -rf ./channel-artifacts/*
-    setGlobalsForPeer0ServiceOrg1
+    setGlobalsForPeer0ServiceOrg3
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME5 \
     --ordererTLSHostnameOverride orderer.example.com \
@@ -292,7 +292,7 @@ createChannel5(){
 
 createChannel6(){
     rm -rf ./channel-artifacts/*
-    setGlobalsForPeer0ServiceOrg1
+    setGlobalsForPeer0ServiceOrg3
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME6 \
     --ordererTLSHostnameOverride orderer.example.com \
@@ -302,7 +302,7 @@ createChannel6(){
 
 createChannel7(){
     rm -rf ./channel-artifacts/*
-    setGlobalsForPeer0ServiceOrg1
+    setGlobalsForPeer0ServiceOrg2
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME7 \
     --ordererTLSHostnameOverride orderer.example.com \
@@ -312,7 +312,7 @@ createChannel7(){
 
 createChannel8(){
     rm -rf ./channel-artifacts/*
-    setGlobalsForPeer0ServiceOrg1
+    setGlobalsForPeer0ServiceOrg2
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME8 \
     --ordererTLSHostnameOverride orderer.example.com \
@@ -322,7 +322,7 @@ createChannel8(){
 
 createChannel9(){
     rm -rf ./channel-artifacts/*
-    setGlobalsForPeer0ServiceOrg1
+    setGlobalsForPeer0ServiceOrg2
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME9 \
     --ordererTLSHostnameOverride orderer.example.com \
@@ -332,7 +332,7 @@ createChannel9(){
 
 createChannel10(){
     rm -rf ./channel-artifacts/*
-    setGlobalsForPeer0ServiceOrg1
+    setGlobalsForPeer0ServiceOrg3
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME10 \
     --ordererTLSHostnameOverride orderer.example.com \
@@ -342,7 +342,7 @@ createChannel10(){
 
 createChannel11(){
     rm -rf ./channel-artifacts/*
-    setGlobalsForPeer0ServiceOrg1
+    setGlobalsForPeer0ServiceOrg4
     
     peer channel create -o localhost:7050 -c $CHANNEL_NAME11 \
     --ordererTLSHostnameOverride orderer.example.com \
@@ -438,7 +438,7 @@ joinChannel(){
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
 }
 
-joinChannel(){
+joinChannel1(){
     setGlobalsForPeer0ServiceOrg1 
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME1.block
     
