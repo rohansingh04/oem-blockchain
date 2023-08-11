@@ -644,7 +644,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=serviceorg1MSP
+      - CORE_PEER_LOCALMSPID=ServiceOrg1MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -690,7 +690,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=serviceorg1MSP
+      - CORE_PEER_LOCALMSPID=ServiceOrg1MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -820,7 +820,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=oemorg1MSP
+      - CORE_PEER_LOCALMSPID=OEMOrg1MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -866,7 +866,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=oemorg1MSP
+      - CORE_PEER_LOCALMSPID=OEMOrg1MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -992,7 +992,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=logisticsorg1MSP
+      - CORE_PEER_LOCALMSPID=LogisticsOrg1MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -1038,7 +1038,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=logisticsorg1MSP
+      - CORE_PEER_LOCALMSPID=LogisticsOrg1MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -1164,7 +1164,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=restarorg1MSP
+      - CORE_PEER_LOCALMSPID=RestarOrg1MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -1210,7 +1210,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=restarorg1MSP
+      - CORE_PEER_LOCALMSPID=RestarOrg1MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -1336,7 +1336,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=restarorg2MSP
+      - CORE_PEER_LOCALMSPID=RestarOrg2MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -1382,7 +1382,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=restarorg2MSP
+      - CORE_PEER_LOCALMSPID=RestarOrg2MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -1508,7 +1508,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=restarorg3MSP
+      - CORE_PEER_LOCALMSPID=RestarOrg3MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -1554,7 +1554,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=restarorg3MSP
+      - CORE_PEER_LOCALMSPID=RestarOrg3MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -1679,7 +1679,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=serviceorg3MSP
+      - CORE_PEER_LOCALMSPID=ServiceOrg3MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -1725,7 +1725,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=serviceorg3MSP
+      - CORE_PEER_LOCALMSPID=ServiceOrg3MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -1850,7 +1850,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=serviceorg2MSP
+      - CORE_PEER_LOCALMSPID=ServiceOrg2MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -1896,7 +1896,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=serviceorg2MSP
+      - CORE_PEER_LOCALMSPID=ServiceOrg2MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -2022,7 +2022,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=oemorg2MSP
+      - CORE_PEER_LOCALMSPID=OEMOrg2MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -2068,7 +2068,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=oemorg2MSP
+      - CORE_PEER_LOCALMSPID=OEMOrg2MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -2194,7 +2194,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=logisticsorg2MSP
+      - CORE_PEER_LOCALMSPID=LogisticsOrg2MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -2240,7 +2240,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=logisticsorg2MSP
+      - CORE_PEER_LOCALMSPID=LogisticsOrg2MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -2366,7 +2366,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=logisticsorg3MSP
+      - CORE_PEER_LOCALMSPID=LogisticsOrg3MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -2412,7 +2412,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=logisticsorg3MSP
+      - CORE_PEER_LOCALMSPID=LogisticsOrg3MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -2537,7 +2537,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=serviceorg4MSP
+      - CORE_PEER_LOCALMSPID=ServiceOrg4MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
@@ -2583,7 +2583,7 @@ services:
     environment:
       - FABRIC_LOGGING_SPEC=info
       - ORDERER_GENERAL_LOGLEVEL=info
-      - CORE_PEER_LOCALMSPID=serviceorg4MSP
+      - CORE_PEER_LOCALMSPID=ServiceOrg4MSP
 
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_test
 
